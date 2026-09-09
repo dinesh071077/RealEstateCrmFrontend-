@@ -6,8 +6,8 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check local storage or system preference
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    // Check local storage, default to light mode if not set
+    if (localStorage.theme === 'dark') {
       return true;
     }
     return false;

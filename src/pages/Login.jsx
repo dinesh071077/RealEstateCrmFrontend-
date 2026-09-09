@@ -36,16 +36,16 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-bg py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
-      <div className="max-w-md w-full space-y-8 bg-white dark:bg-dark-surface p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8 bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100">
         <div className="text-center">
-          <div className="mx-auto h-12 w-12 bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 rounded-xl flex items-center justify-center mb-4 shadow-sm border border-primary-200 dark:border-primary-800/50">
+          <div className="mx-auto h-12 w-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center mb-4 shadow-sm">
             <Building2 className="h-8 w-8" />
           </div>
-          <h2 className="mt-2 text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+          <h2 className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight">
             Welcome back
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm text-gray-500">
             Sign in to your CRM account
           </p>
         </div>
@@ -62,13 +62,13 @@ const Login = () => {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Email Address
               </label>
               <input
                 {...register('email')}
                 type="email"
-                className={`input-field ${errors.email ? 'border-red-300 dark:border-red-500 ring-1 ring-red-300 dark:ring-red-500' : ''}`}
+                className={`appearance-none block w-full px-4 py-3 bg-white text-gray-900 border ${errors.email ? 'border-red-300 ring-1 ring-red-300' : 'border-gray-300'} rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm transition-shadow`}
                 placeholder="you@example.com"
               />
               {errors.email && (
@@ -77,13 +77,13 @@ const Login = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Password
               </label>
               <input
                 {...register('password')}
                 type="password"
-                className={`input-field ${errors.password ? 'border-red-300 dark:border-red-500 ring-1 ring-red-300 dark:ring-red-500' : ''}`}
+                className={`appearance-none block w-full px-4 py-3 bg-white text-gray-900 border ${errors.password ? 'border-red-300 ring-1 ring-red-300' : 'border-gray-300'} rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm transition-shadow`}
                 placeholder="••••••••"
               />
               {errors.password && (
@@ -106,15 +106,15 @@ const Login = () => {
             </button>
           </div>
 
-          <div className="mt-6 border-t border-gray-100 dark:border-gray-800 pt-6">
-            <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">Demo Credentials:</h3>
-            <div className="bg-gray-50 dark:bg-dark-bg rounded-lg p-3 text-xs text-gray-600 dark:text-gray-400 space-y-2 border border-gray-200 dark:border-gray-700">
+          <div className="mt-6 border-t border-gray-100 pt-6">
+            <h3 className="text-sm font-medium text-gray-900 mb-3">Demo Credentials:</h3>
+            <div className="bg-gray-50 rounded-lg p-3 text-xs text-gray-600 space-y-2 border border-gray-200">
               <div className="flex justify-between">
-                <span className="font-semibold text-gray-700 dark:text-gray-300">Admin:</span>
+                <span className="font-semibold text-gray-700">Admin:</span>
                 <span>admin@realestate.com / Admin@123</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-semibold text-gray-700 dark:text-gray-300">Sales:</span>
+                <span className="font-semibold text-gray-700">Sales:</span>
                 <span>sales@realestate.com / Sales@123</span>
               </div>
             </div>
